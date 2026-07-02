@@ -31,3 +31,8 @@ datasets/sift1b/
 list_cache/stats/
 list_cache/nothings/
 .vscode/
+data/
+database/
+runs/
+.cudaenv/
+.venv/

@@ -59,7 +59,7 @@ class vLiteConfigs:
 
         if not self.gpu_type:
             if torch.cuda.is_available():
-                match = re.search(r'\b(H200|H100|A100|L40S)\b', torch.cuda.get_device_name(0))
+                match = re.search(r'\b(H200|H100|A100|L40S|RTX 4090|RTX 3090)\b', torch.cuda.get_device_name(0))
                 if match:
                     self.gpu_type = match.group(1)
                 else:
