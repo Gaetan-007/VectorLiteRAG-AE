@@ -2,6 +2,15 @@
 This repository contains the artifact for VectorLiteRAG, including the full implementation, experiment scripts, preprocessing pipelines, and plotting utilities required to reproduce the evaluation results reported in the paper.
 The artifact supports both end-to-end evaluation runs and fine-grained, individual executions for profiling and ablation studies.
 
+> **Agentic Search-R1 replay harness (single-node, multi-GPU).** In addition to the
+> paper artifact below, this repo ships a self-contained harness under `tools/sr1/`
+> that replays a real multi-turn Search-R1 trace through vLLM (Qwen3-4B) against the
+> hybrid CPU/GPU IVF-Flat retriever, with SLO-aware partitioning, an online hot-swap
+> updater, and a dynamic dispatcher. It does not require conda or building FAISS.
+> See [`docs/SEARCH_R1_REPLAY.md`](docs/SEARCH_R1_REPLAY.md) for setup and the
+> **multi-GPU / single-GPU configuration guide**.
+
+
 ## Environment Setup
 #### Setup conda environment
 The artifact is tested using Anaconda / Miniconda.
